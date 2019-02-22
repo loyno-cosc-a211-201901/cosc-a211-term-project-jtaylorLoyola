@@ -73,6 +73,7 @@ int moveToSceneTwo;
                   cout<< "Game Over"<< endl;
                   cout<< "*********"<< endl;
                   cout<< endl;
+                  return 0;
                   break;
 
           case 2: system ("cls");
