@@ -141,10 +141,10 @@ int secondSceneChoice;
 
 //Scene 3
 
-int thirdSceneChoice
+int thirdSceneChoice;
 
       cout<< "You hear a commanding shout in the distance.\n It is your king leading his knights in one last push against the swarm of skeletons.\n The swarm of skeletons is immmense, the king will most certainly fail.\n"<< endl;
-      cout<<
+      cout<< "\n"<<endl;
       cout<< "\n1. You run to your king to join the battle.\n2. You stand your ground to defend your home.\n3. You see a pathway to safety leading away from the city. Other citizens are escaping through it."<< endl;
       cout<< "\nWhat is your choice? (1,2,3)"<< endl;
       cout<< "\n";
@@ -194,7 +194,7 @@ int thirdSceneChoice
           return 0;
         }
 
-//Scene 4  
+//Scene 4
 
 
 
