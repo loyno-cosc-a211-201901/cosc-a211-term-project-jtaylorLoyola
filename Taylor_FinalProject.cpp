@@ -46,6 +46,8 @@ int firstSceneChoice;
     system ("pause");
     cout<< endl;
 
+//menu and validating input choice
+
     do {
     cout<< "\nQuickly, what should you do?!"<< endl;
     cout<< "1. Run to the window to see what is happening"<< endl;
@@ -62,7 +64,7 @@ int firstSceneChoice;
     system ("pause");
   } while(firstSceneChoice>3 || firstSceneChoice<1);
 
-//Scene 1 options and consequences
+//Scene 1 results/consequences
 
     switch (firstSceneChoice)
         {
@@ -82,7 +84,7 @@ int firstSceneChoice;
                   break;
 
           case 2: system ("cls");
-                  cout<< "\n You run out the door and immediately run into a bloody skeleton with a sword.\nHe stares at you with his empty eye sockets.\nHe raises his bloody sword to kill you!!\n\n"<< endl;
+                  cout<< "\nYou run out the door and immediately run into a bloody skeleton with a sword.\nHe stares at you with his empty eye sockets.\nHe raises his bloody sword to kill you!!\n\n"<< endl;
                   system ("pause");
                   break;
 
@@ -105,13 +107,15 @@ int firstSceneChoice;
 
 int secondSceneChoice;
 
-      cout<< "\n His sword is coming down on you!! What do you do?!";
+      do {
+      cout<< "\nHis sword is coming down on you!! What do you do?!";
       cout<< "\n\n";
       cout<< "\n1. Catch his hands to stop the sword \n2. Try to catch the sword in your hands to stop it \n3. Punch him in the face"<< endl;
       cout<< "\nWhat is your choice? (1,2,3)"<< endl;
       cout<< "\n";
 
       cin>> secondSceneChoice;
+    } while(secondSceneChoice>3 || secondSceneChoice<1);
 
       cout<< "\nYou have selected "<< secondSceneChoice<<"."<< endl;
       cout<< "\nRoll the dice to see if you succeed in your choice!!"<< endl;
@@ -149,7 +153,7 @@ int secondSceneChoice;
 
 int thirdSceneChoice;
 
-      cout<< "You hear a commanding shout in the distance.\n It is your king leading his knights in one last push against the swarm of skeletons.\n The swarm of skeletons is immmense, the king will most certainly fail.\n"<< endl;
+      cout<< "You hear a commanding shout in the distance.\nIt is your king leading his knights in one last push against the swarm of skeletons.\nThe swarm of skeletons is immmense, the king will most certainly fail.\n"<< endl;
       cout<< "\n"<<endl;
       cout<< "\n1. You run to your king to join the battle.\n2. You stand your ground to defend your home.\n3. You see a pathway to safety leading away from the city. Other citizens are escaping through it."<< endl;
       cout<< "\nWhat is your choice? (1,2,3)"<< endl;
