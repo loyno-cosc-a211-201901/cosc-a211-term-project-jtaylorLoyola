@@ -38,31 +38,36 @@ srand(seed);
 // Scene 1
 
 int firstScene;
+int firstSceneChoice;
+
     system ("cls");
     cout<< "\nYou wake in your bed to the sound of hundreds of screams. The sounds of weapons clashing thunder through the air."<< endl;
     cout<< "\n\n";
     system ("pause");
     cout<< endl;
-    cout<< "Quickly, what should you do?!"<< endl;
+
+    do {
+    cout<< "\nQuickly, what should you do?!"<< endl;
     cout<< "1. Run to the window to see what is happening"<< endl;
     cout<< "2. Run out the door to see what is happening" << endl;
     cout<< "3. Stay in your bed and hope noone finds you" << endl;
     cout<< endl;
     cout<< "What is your choice? (1,2,3)"<< endl;
-int firstSceneChoice;
-int moveToSceneTwo;
     cout<< endl;
-      cin>> firstSceneChoice;
-    cout<< endl;
-    cout<< "You chose option "<< firstSceneChoice<< " ."<< endl;
+
+    cin>> firstSceneChoice;
+
+    cout<< "\nYou chose option "<< firstSceneChoice<< " ."<< endl;
     cout<< endl;
     system ("pause");
+  } while(firstSceneChoice>3 || firstSceneChoice<1);
 
 //Scene 1 options and consequences
 
-        switch (firstSceneChoice)
+    switch (firstSceneChoice)
         {
-          case 1: cout<< "You run to the window to see many bloody skeleton soldiers fighting with the kingdom's knights and citizens"<<endl;
+          case 1: system ("cls");
+                  cout<< "You run to the window to see many bloody skeleton soldiers fighting with the kingdom's knights and citizens"<<endl;
                   cout<< "A skeleton sees you through the window"<< endl;
                   cout<< "He draws his bow and launches an arrow at you"<< endl;
                   cout<< "You are too slow to avoid the arrow."<< endl;
@@ -91,10 +96,10 @@ int moveToSceneTwo;
                   cout<< "Game Over"<< endl;
                   cout<< "*********"<< endl;
                   cout<< endl;
+                  return 0;
                   break;
 
           }
-
 
 // Scene 2
 
