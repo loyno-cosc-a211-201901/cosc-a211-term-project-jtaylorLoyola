@@ -1,28 +1,39 @@
 //Program Name: Final project
 //Purpose: To create a text based game.
 //Author: Joshua Taylor
-//Date Last Modified:2/22/19
+//Date Last Modified:3/06/19
 
 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <iomanip>
 
 using namespace std;
 
 
+
+//game over function
+void gameOver()
+{
+  cout<< endl;
+  cout<< "*********"<< endl;
+  cout<< "Game Over"<< endl;
+  cout<< "*********"<< endl;
+  cout<< endl;
+}
+
+
+//start main function
 int main()
 {
 
-//Declaring random number generator and "dice roller"
-int rand();
+//Declaring random number generator and "dice roller" int
 int diceroll;
-unsigned seed = time(0);
-srand(seed);
+srand(time(0));
 
 
 //Intro and welcome
-
     system ("cls");
     cout<< "\n\n*************************"<< endl;
     cout<< "    Insert Title Here"    << endl;
@@ -36,7 +47,6 @@ srand(seed);
     cout<< endl;
 
 // Scene 1
-
 int firstScene;
 int firstSceneChoice;
 
@@ -47,7 +57,6 @@ int firstSceneChoice;
     cout<< endl;
 
 //menu and validating input choice
-
     do {
     cout<< "\nQuickly, what should you do?!"<< endl;
     cout<< "1. Run to the window to see what is happening"<< endl;
@@ -65,7 +74,6 @@ int firstSceneChoice;
   } while(firstSceneChoice>3 || firstSceneChoice<1);
 
 //Scene 1 results/consequences
-
     switch (firstSceneChoice)
         {
           case 1: system ("cls");
@@ -75,11 +83,7 @@ int firstSceneChoice;
                   cout<< "You are too slow to avoid the arrow."<< endl;
                   cout<< "The arrow pierces your forehead and you drop to the floor lifeless."<< endl;
                   cout<< "You die without ever joining the battle"<< endl;
-                  cout<< endl;
-                  cout<< "*********"<< endl;
-                  cout<< "Game Over"<< endl;
-                  cout<< "*********"<< endl;
-                  cout<< endl;
+                  gameOver();
                   return 0;
                   break;
 
@@ -93,21 +97,17 @@ int firstSceneChoice;
                   cout<< "You stay in your bed with the covers over your head. You hear your door come crashing in." << endl;
                   cout<< "You close your eyes in terror. You proceed to wet the bed in fear."<< endl;
                   cout<< "A sharp pain pierces your chest. A sword has been thrust through your heart. You die a coward."<< endl;
-                  cout<< endl;
-                  cout<< "*********"<< endl;
-                  cout<< "Game Over"<< endl;
-                  cout<< "*********"<< endl;
-                  cout<< endl;
+                  gameOver();
                   return 0;
                   break;
 
           }
 
 // Scene 2
-
 int secondSceneChoice;
 
-      do {
+      do
+      {
       cout<< "\nHis sword is coming down on you!! What do you do?!";
       cout<< "\n\n";
       cout<< "\n1. Catch his hands to stop the sword \n2. Try to catch the sword in your hands to stop it \n3. Punch him in the face"<< endl;
@@ -115,7 +115,7 @@ int secondSceneChoice;
       cout<< "\n";
 
       cin>> secondSceneChoice;
-    } while(secondSceneChoice>3 || secondSceneChoice<1);
+      } while(secondSceneChoice>3 || secondSceneChoice<1);
 
       cout<< "\nYou have selected "<< secondSceneChoice<<"."<< endl;
       cout<< "\nRoll the dice to see if you succeed in your choice!!"<< endl;
@@ -123,10 +123,11 @@ int secondSceneChoice;
 
       system ("pause");
 
-      diceroll= (rand() % 10) + 2;
+      system ("cls");
+//diceroll
+      diceroll= (rand() % 10) + 1;
 
 // Scene 2 options/consequences
-
       if (diceroll>=4)
       {
         system ("cls");
@@ -141,11 +142,7 @@ int secondSceneChoice;
         cout<< "You rolled a(n) "<< diceroll<< "."<< endl;
         cout<< endl;
         cout<< "You have failed. The skeleton's blade slices into your skull. Blood runs down your face and your vision goes black.\n\n"<<endl;
-        cout<< endl;
-        cout<< "*********"<< endl;
-        cout<< "Game Over"<< endl;
-        cout<< "*********"<< endl;
-        cout<< endl;
+        gameOver();
         return 0;
       }
 
@@ -184,10 +181,7 @@ int thirdSceneChoice;
           cout<< "\nYou rolled a(n) "<< diceroll<< "."<< endl;
           cout<< "Your roll succeeds.\n\n.\n\n You escape the city with the woman and children. You all travel for days to the next city. When you arrive you find it swarming with skeletons. Your are all massacred. You die a coward with no honor.\n"<< endl;
           cout<< endl;
-          cout<< "*********"<< endl;
-          cout<< "Game Over"<< endl;
-          cout<< "*********"<< endl;
-          cout<< endl;
+          gameOver();
           return 0;
         }
         else
@@ -196,11 +190,7 @@ int thirdSceneChoice;
           cout<< "You rolled a(n) "<< diceroll<< "."<< endl;
           cout<< endl;
           cout<< "You have failed."<<endl;
-          cout<< endl;
-          cout<< "*********"<< endl;
-          cout<< "Game Over"<< endl;
-          cout<< "*********"<< endl;
-          cout<< endl;
+          gameOver();
           return 0;
         }
 
